@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>charm prototype</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <script src="./script/svgManipulation.js" defer></script>
+  </head>
+  <body>
+    <div class="viewport">
+      <div class="content">
+        <div class="charm">
+          <div class="charm__top">
+            <object data="./assets/top.svg" type="image/svg+xml"></object>
+          </div>
+          <div class="charm__mid"></div>
+          <div class="charm__bottom"></div>
+        </div>
+        <div>
+          <input
+            type="range"
+            id="stroke-weight-slider"
+            name="volume"
+            min="0.5"
+            max="10" />
+          <label for="stroke-weight-slider">획두께</label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

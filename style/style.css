@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.viewport {
+  height: 100dvh;
+}
+
+.content {
+  min-width: 800px;
+  padding-block: 56px;
+}
+
+.charm {
+  width: 400px;
+  margin-inline: auto;
+}
+.charm__top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  margin-inline: auto;
+}
+.charm__mid {
+  height: 100px;
+  background-color: green;
+}
+.charm__bottom {
+  height: 100px;
+  background-color: blue;
+}
