@@ -6,34 +6,55 @@
 
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 .viewport {
   height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
-.content {
-  min-width: 800px;
-  padding-block: 56px;
-}
-
-.charm {
-  width: 400px;
+.grid {
+  display: grid;
+  grid-template-columns: 120px 270px 120px;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  justify-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-inline: auto;
 }
-.charm__top {
+
+.button {
+  padding: 16px;
+  margin-bottom: 24px;
+  color: white;
+  cursor: pointer;
+  background-color: black;
+}
+.charm-container {
   position: relative;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+}
+.charm-top {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 260px;
+  height: 200px;
+}
+.charm-mid {
+  position: absolute;
+  top: 180px;
+  left: 0px;
+  width: 270px;
+  height: 450px;
+}
+.charm-bot {
+  position: absolute;
+  top: 600px;
+  left: 35px;
   width: 200px;
   height: 200px;
-  margin-inline: auto;
-}
-.charm__mid {
-  height: 100px;
-  background-color: green;
-}
-.charm__bottom {
-  height: 100px;
-  background-color: blue;
 }

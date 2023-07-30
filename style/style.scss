@@ -1,3 +1,5 @@
+$charm-w: 270px;
+
 *,
 *::after,
 *::before {
@@ -6,39 +8,88 @@
 
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 .viewport {
   height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
-.content {
-  min-width: 800px;
-  padding-block: 56px;
+.grid {
+  display: grid;
+  grid-template-columns: 120px $charm-w 120px;
+  column-gap: 24px;
+  justify-items: center;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.button {
+  &-wrapper {
+    &-left {
+    }
+
+    &-right {
+    }
+  }
+
+  padding: 16px;
+  margin-bottom: 24px;
+  color: white;
+  cursor: pointer;
+  background-color: black;
 }
 
 .charm {
-  width: 400px;
-  margin-inline: auto;
-
-  //   background-color: darkslategray;
-
-  &__top {
+  &-container {
     position: relative;
-    display: flex;
-    justify-content: center;
-    width: 200px;
-    height: 200px;
-    margin-inline: auto;
+    width: 100%;
   }
 
-  &__mid {
-    height: 100px;
-    background-color: green;
+  &-top {
+    $w: 260px;
+    $h: 200px;
+    $x: calc(($charm-w - $w) / 2);
+    $y: 0;
+
+    position: absolute;
+    top: $y;
+    left: $x;
+    width: $w;
+    height: $h;
+
+    // background-color: rgb(255 0 0 / 10%);
   }
 
-  &__bottom {
-    height: 100px;
-    background-color: blue;
+  &-mid {
+    $w: 270px;
+    $h: 450px;
+    $x: calc(($charm-w - $w) / 2);
+    $y: 180px;
+
+    position: absolute;
+    top: $y;
+    left: $x;
+    width: $w;
+    height: $h;
+
+    // background-color: rgb(0 255 0 / 10%);
+  }
+
+  &-bot {
+    $w: 200px;
+    $h: 200px;
+    $x: calc(($charm-w - $w) / 2);
+    $y: 600px;
+
+    position: absolute;
+    top: $y;
+    left: $x;
+    width: $w;
+    height: $h;
+
+    // background-color: rgb(0 0 255 / 10%);
   }
 }
