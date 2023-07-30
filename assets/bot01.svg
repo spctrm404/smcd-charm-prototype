@@ -2,7 +2,7 @@
 <svg id="bottom01" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
   <defs>
     <style>
-      .cls-1 {
+      <!-- .cls-1 {
         fill: #fa4013;
       }
 
@@ -15,7 +15,7 @@
         stroke: #ffcf08;
         stroke-miterlimit: 10;
         stroke-width: .5px;
-      }
+      } -->
     </style>
   </defs>
   <path id="bottomstork05" class="cls-3" d="m46.87,57.86l.04,14.29s.35,12.43,6.84,11.29"/>

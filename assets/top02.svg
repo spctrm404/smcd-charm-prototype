@@ -2,7 +2,7 @@
 <svg id="top02" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 200">
   <defs>
     <style>
-      .cls-1 {
+      <!-- .cls-1 {
         fill: #ffcf08;
       }
 
@@ -16,7 +16,7 @@
         stroke: #ffcf08;
         stroke-miterlimit: 10;
         stroke-width: .5px;
-      }
+      } -->
     </style>
   </defs>
   <path id="topstork04" class="cls-3" d="m38.02,70.28l.16,13.22s.45,11.5,6.88,10.39"/>

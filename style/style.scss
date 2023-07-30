@@ -1,4 +1,11 @@
 $charm-w: 270px;
+$charm-h: 800px;
+
+:root {
+  --stroke-w-min: 0.5px;
+  --stroke-w-max: 20px;
+  --stroke-w-normal: 0.5;
+}
 
 *,
 *::after,
@@ -19,6 +26,7 @@ body {
 
 .grid {
   display: grid;
+  grid-template-rows: $charm-h;
   grid-template-columns: 120px $charm-w 120px;
   column-gap: 24px;
   justify-items: center;
@@ -39,6 +47,7 @@ body {
   margin-bottom: 24px;
   color: white;
   cursor: pointer;
+  user-select: none;
   background-color: black;
 }
 
@@ -46,6 +55,7 @@ body {
   &-container {
     position: relative;
     width: 100%;
+    height: 100%;
   }
 
   &-top {
@@ -59,37 +69,51 @@ body {
     left: $x;
     width: $w;
     height: $h;
-
-    // background-color: rgb(255 0 0 / 10%);
   }
 
   &-mid {
     $w: 270px;
     $h: 450px;
     $x: calc(($charm-w - $w) / 2);
-    $y: 180px;
+    $y: 150px;
 
     position: absolute;
     top: $y;
     left: $x;
     width: $w;
     height: $h;
-
-    // background-color: rgb(0 255 0 / 10%);
   }
 
   &-bot {
     $w: 200px;
     $h: 200px;
     $x: calc(($charm-w - $w) / 2);
-    $y: 600px;
+    $y: 550px;
 
     position: absolute;
     top: $y;
     left: $x;
     width: $w;
     height: $h;
-
-    // background-color: rgb(0 0 255 / 10%);
   }
+}
+
+.cls-1 {
+  fill: 0;
+}
+
+.cls-2 {
+  fill: 0;
+}
+
+.cls-3 {
+  stroke: red;
+  stroke-width: calc(
+    (var(--stroke-w-max) - var(--stroke-w-min)) * var(--stroke-w-normal) +
+      var(--stroke-w-min)
+  );
+}
+
+.cls-4 {
+  fill: 0;
 }
